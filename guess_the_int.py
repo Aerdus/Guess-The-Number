@@ -23,6 +23,10 @@ def main():
                         user_input = int(input("Enter a number: "))
                         if input_check(user_input):
                             print(int_check(user_input, correct_ans))
+                            print("Answer: ", correct_ans)
+                            print("Score: ", score)
+                            print("Round: ", round)
+                            print("Incorrect Guess: ", incorrect_guess)
                             if int_check(user_input, correct_ans) == "Correct!":
                                 incorrect_guess == 0
                                 score += 1
@@ -57,13 +61,13 @@ def rand_num():
 
 def int_check(user_input, rand_num):
     if rand_num == user_input:
-        return f"\nCorrect!\n"
+        return f"Correct!"
     elif rand_num > user_input:
-        return f"\nHigher!\n"
+        return f"Higher!"
     elif rand_num < user_input:
-        return f"\nLower!\n"
+        return f"Lower!"
     else:
-        return f"\nIncorrect!\n"
+        return f"Incorrect!"
 
 
 main()
